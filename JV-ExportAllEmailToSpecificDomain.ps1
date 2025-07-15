@@ -23,7 +23,7 @@ Connect-ExchangeOnline -ShowBanner:$false
 Write-Host "Quering messages sent to $Domain between $StartDate and $EndDate..." -ForegroundColor Yellow
 $traces = Get-MessageTraceV2 -StartDate $StartDate -EndDate $EndDate -ResultSize 5000
 $filteredTraces = $traces | Where-Object {
-    $_.RecipientAddress -like "*@$Domein"
+    $_.RecipientAddress -like "*@$Domain"
 }
 # Check if there are results
 if ($filteredTraces.Count -eq 0) {
