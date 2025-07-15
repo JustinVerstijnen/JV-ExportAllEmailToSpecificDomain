@@ -12,7 +12,7 @@ Write-Host "     _           _   _        __     __            _   _  _
 # === PARAMETERS ===
 $StartDate = (Get-Date).AddDays(-10) # 10 days is the limit for instant reporting
 $EndDate = Get-Date
-$Domain = "skrepr.com"
+$Domain = "microsoft.com"
 $ExportPad = Join-Path -Path $PSScriptRoot -ChildPath "ReportSentTo_$Domain.csv"
 # === END PARAMETERS ===
 
